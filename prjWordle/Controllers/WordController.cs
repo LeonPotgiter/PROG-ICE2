@@ -42,17 +42,16 @@ namespace prjWordle.Controllers
 		Words word = new Words();
 		
 
-		[HttpPost]
+		[HttpGet]
 		public string GenerateWord()
 		{
 			word.GeneratedWord = words[rand.Next(0, words.Count)];
 			return word.GeneratedWord;
 		}
 
-		[HttpGet]
+		[HttpPost]
 		public string CheckWord(string impWord, string guessWord)
 		{
-
 			string guessedLetters = "";
 
 			foreach (char c in guessWord)
@@ -64,6 +63,7 @@ namespace prjWordle.Controllers
 			}
 			return guessedLetters;
 		}
+
 		//https://frederikspies.azurewebsites.net/
 		//api interface end points ('api/word')
 
