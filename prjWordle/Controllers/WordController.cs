@@ -64,8 +64,8 @@ namespace prjWordle.Controllers
 			}
 			return guessedLetters;
 		}
-
-
+		//https://frederikspies.azurewebsites.net/
+		//api interface end points ('api/word')
 
 	}
 }
